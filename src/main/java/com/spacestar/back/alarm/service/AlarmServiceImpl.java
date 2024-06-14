@@ -2,7 +2,7 @@ package com.spacestar.back.alarm.service;
 
 import org.springframework.stereotype.Service;
 
-import com.spacestar.back.alarm.dto.AlarmListResDto;
+import com.spacestar.back.alarm.dto.Res.AlarmListResDto;
 import com.spacestar.back.alarm.repository.AlarmRepository;
 
 import lombok.RequiredArgsConstructor;

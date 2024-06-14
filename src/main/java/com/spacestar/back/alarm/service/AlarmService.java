@@ -1,6 +1,6 @@
 package com.spacestar.back.alarm.service;
 
-import com.spacestar.back.alarm.dto.AlarmListResDto;
+import com.spacestar.back.alarm.dto.Res.AlarmListResDto;
 
 public interface AlarmService {
 

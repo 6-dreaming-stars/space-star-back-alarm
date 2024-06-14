@@ -10,8 +10,7 @@ import org.springframework.stereotype.Component;
 import com.querydsl.core.types.Projections;
 import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import com.spacestar.back.alarm.domain.QAlarm;
-import com.spacestar.back.alarm.dto.AlarmResDto;
+import com.spacestar.back.alarm.dto.Res.AlarmResDto;
 
 import lombok.RequiredArgsConstructor;
 
