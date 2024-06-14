@@ -48,9 +48,8 @@ public class Alarm extends GlobalTime {
 	private CheckStatus checkStatus;
 
 	@Builder
-	public Alarm(Long id, String receiverUuid, String senderUuid, String content, AlarmType alarmType,
+	public Alarm(String receiverUuid, String senderUuid, String content, AlarmType alarmType,
 		CheckStatus checkStatus) {
-		this.id = id;
 		this.receiverUuid = receiverUuid;
 		this.senderUuid = senderUuid;
 		this.content = content;

@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.spacestar.back.alarm.dto.Req.AlarmAddReqDto;
 import com.spacestar.back.alarm.service.AlarmServiceImpl;
+import com.spacestar.back.alarm.vo.Req.AlarmAddReqVo;
 import com.spacestar.back.alarm.vo.Res.AlarmListResVo;
 import com.spacestar.back.global.ResponseEntity;
 import com.spacestar.back.global.ResponseSuccess;
@@ -38,9 +40,11 @@ public class AlarmController {
 	//알림 추가 API
 	@PostMapping("/alarm/add")
 	@Operation(summary = "알림 추가 API")
-	public ResponseEntity<Void> alarmAdd(@RequestHeader("UUID") String uuid){
-		return null;
+	public ResponseEntity<Void> alarmAdd(@RequestBody AlarmAddReqVo alarmAddReqVo){
+		alarmService.addAlarm(modelMapper.map(alarmService, AlarmAddReqDto.class));
+		return new ResponseEntity<>(ResponseSuccess.ALARM_ADD_SUCCESS);
 	}
+
 	//Todo
 	//알림 상태 조회 API
 
